@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Auth_test.Controllers
 {
+    [Route("api/[controller]/[action]")]
     public class HomeController : Controller
     {
         public IActionResult Index()

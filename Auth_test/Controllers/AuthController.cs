@@ -54,7 +54,7 @@ namespace Auth_test.Controllers
         }
 
         [HttpGet]
-        public void Forbidden()
+        public RedirectResult Forbidden()
         {
             StringValues paramReturnUrl;
             bool exists = _context.Request.Query.TryGetValue("returnUrl", out paramReturnUrl);
@@ -62,7 +62,7 @@ namespace Auth_test.Controllers
             paramReturnUrl = exists ? _context.Request.RouteValues + paramReturnUrl[0] : string.Empty;
             Console.WriteLine($"{paramReturnUrl}에 대한 권한 없음");
 
-            RedirectPermanent("/api/Auth/Login");
+            return RedirectPermanent("/api/Home/Index");
         }
     }
 }

@@ -35,6 +35,7 @@ namespace Auth_test
                 {
                     options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
                     options.SlidingExpiration = true;
+                    options.LoginPath = "/api/Auth/Forbidden/";
                     options.AccessDeniedPath = "/api/Auth/Forbidden/";
                 });
 
