@@ -2,7 +2,7 @@
 
 namespace Auth_test_Service
 {
-    public class Class1
+    public class OauthService
     {
     }
 }
