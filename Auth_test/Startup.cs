@@ -2,15 +2,14 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.IdentityModel.Tokens;
+using Auth_test.Policy;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Auth_test
 {
@@ -27,6 +26,7 @@ namespace Auth_test
         public void ConfigureServices(IServiceCollection services)
         {
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton<IAuthorizationHandler, AuthorizHandler>();
 
             services.AddControllersWithViews();
             //신원 보증과 승인권한
@@ -39,7 +39,11 @@ namespace Auth_test
                     options.AccessDeniedPath = "/api/Auth/Forbidden/";
                 });
 
-            services.AddAuthorization();
+            services.AddAuthorization(o =>
+            {
+                o.AddPolicy("Over21",
+                          policy => policy.Requirements.Add(new AuthorizationRequirement(21)));
+            });
 
         }
 

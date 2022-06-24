@@ -3,9 +3,13 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Primitives;
+using Microsoft.IdentityModel.Tokens;
 using System;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Text;
 
 namespace Auth_test.Controllers
 {
@@ -14,17 +18,19 @@ namespace Auth_test.Controllers
     public class AuthController : ControllerBase
     {
         private HttpContext _context;
+        private IConfiguration _configuration;
 
-        public AuthController(IHttpContextAccessor accessor)
+        public AuthController(IHttpContextAccessor accessor, IConfiguration config)
         {
             _context = accessor.HttpContext;
+            _configuration = config;
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin, User")]
+        [Authorize(Policy = "Over21")]
         public void Authorization()
         {
-            Console.WriteLine("성공");
+            Console.WriteLine("권한있음");
         }
 
         [HttpGet]
@@ -45,13 +51,40 @@ namespace Auth_test.Controllers
             {
                 var principal = new ClaimsPrincipal(identity);
 
-                var login = _context.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+                //_context.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+
+                _context.Response.Headers.Add("Set-Cookie", GenerateJwtToken("dpfwl8745"));
 
                 return RedirectPermanent("/api/Auth/Authorization");
             }
 
             return RedirectPermanent("/");
         }
+
+        private string GenerateJwtToken(string username)
+        {
+            //ClaimsIdentity identity = null;
+            //identity = new ClaimsIdentity(new[] {
+            //    new Claim(JwtRegisteredClaimNames.Sub, username),
+            //    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+            //    new Claim(ClaimTypes.NameIdentifier, username),
+            //    new Claim(ClaimTypes.Role, "User") }
+            //);
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:SecretKey"]));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            var expires = DateTime.Now.AddDays(Convert.ToDouble(_configuration["JWT:JwtExpireDays"]));
+
+            var token = new JwtSecurityToken(
+                _configuration["JwtIssuer"],
+                _configuration["JwtAudience"],
+                expires: expires,
+                signingCredentials: creds
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
 
         [HttpGet]
         public RedirectResult Forbidden()
