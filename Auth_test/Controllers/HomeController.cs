@@ -11,7 +11,12 @@ namespace Auth_test.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View();           
+        }
+
+        public IActionResult Login()
+        {
+            return RedirectPermanent("/api/auth/googlelogin");
         }
 
         public IActionResult privacy()
