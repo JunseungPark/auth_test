@@ -1,6 +1,25 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div>
+    <form action="https://oauth2.googleapis.com/token" method="post" enctype="application/x-www-form-urlencoded">
+        code : <input type="text" name="code" value="4/0AX4XfWiXH48fdmWEJV_g0kSEd3Zs7S1lRWkmKJrQuPI7MBsigM6ubRgpNx47KfG80rkxqQ" /><br />
+        client_id : <input type="text" name="client_id" value="148638893775-f1bbqle3vgkmjvkhiadki3c79snbkpcp.apps.googleusercontent.com" /><br />
+        client_secret : <input type="text" name="client_secret" value="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" /><br>
+        redirect_uri : <input type="text" name="redirect_uri" value="https://localhost:44364/Home/Privacy" /><br />
+        grant_type : <input type="text" name="grant_type" value="authorization_code" /><br />
+        <input type="submit" />
+    </form>
+
+    
+</div>
+
+<style>
+    input{
+        width:300px;
+    }
+</style>
+
+//redirect url 경로가 Callback으로 들어가게끔
+// api/controller/callback
