@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = Auth_test_Data
-build_property.ProjectDir = C:\Users\khmin\Desktop\feelanet_tets\Auth_test_Data\
+build_property.ProjectDir = C:\Users\박준승\source\repos\auth_test\Auth_test_Data\
