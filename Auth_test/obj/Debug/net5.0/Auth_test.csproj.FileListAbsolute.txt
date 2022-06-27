@@ -364,3 +364,10 @@ C:\Users\khmin\Desktop\feelanet_tets\Auth_test\obj\Debug\net5.0\ref\Auth_test.dl
 C:\Users\khmin\Desktop\feelanet_tets\Auth_test\obj\Debug\net5.0\Auth_test.pdb
 C:\Users\khmin\Desktop\feelanet_tets\Auth_test\obj\Debug\net5.0\Auth_test.genruntimeconfig.cache
 >>>>>>> ce7f0181713a506e30cd133f73b98f370e6a939b
+C:\Users\박준승\source\repos\auth_test\Auth_test\bin\Debug\net5.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\박준승\source\repos\auth_test\Auth_test\bin\Debug\net5.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\박준승\source\repos\auth_test\Auth_test\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\박준승\source\repos\auth_test\Auth_test\bin\Debug\net5.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\박준승\source\repos\auth_test\Auth_test\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\박준승\source\repos\auth_test\Auth_test\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\박준승\source\repos\auth_test\Auth_test\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll

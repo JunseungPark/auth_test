@@ -8,11 +8,8 @@ namespace Auth_test.Policy
 {
     public class AuthorizationRequirement : IAuthorizationRequirement
     {
-        public AuthorizationRequirement(int age)
-        {
-            MinimumAge = age;
+        public AuthorizationRequirement() {
+            Console.WriteLine("권한있음");
         }
-
-        protected int MinimumAge { get; set; }
     }
 }

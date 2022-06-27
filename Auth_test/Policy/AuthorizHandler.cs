@@ -1,26 +1,33 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using System;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace Auth_test.Policy
 {
     public class AuthorizHandler : AuthorizationHandler<AuthorizationRequirement>
     {
-        private HttpContext _cont;
-        public AuthorizHandler(IHttpContextAccessor accessor) {
-            _cont = accessor.HttpContext;
-        }
         protected override Task HandleRequirementAsync(
                AuthorizationHandlerContext context,
                AuthorizationRequirement requirement)
         {
-
-            if (_cont.Request.Cookies != null) {
-                var value = _cont.Request.Cookies;
+            HttpContextAccessor IHttpContextAccessor = new HttpContextAccessor();
+            string d = IHttpContextAccessor.HttpContext.Request.Cookies["Set-Cookies"];
+            if (d != null)
+            {
                 context.Succeed(requirement);
             }
+            else {
+                context.Fail();
+            } 
             return Task.CompletedTask;
         }
+
     }
 }

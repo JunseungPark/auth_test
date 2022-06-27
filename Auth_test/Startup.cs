@@ -7,9 +7,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using System;
-using Microsoft.IdentityModel.Tokens;
 using Auth_test.Policy;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc.Authorization;
 
 namespace Auth_test
 {
@@ -25,12 +26,11 @@ namespace Auth_test
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton<IAuthorizationHandler, AuthorizHandler>();
-
-            services.AddControllersWithViews();
+            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             //신원 보증과 승인권한
-            services.AddAuthentication(defaultScheme: CookieAuthenticationDefaults.AuthenticationScheme)
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options =>
                 {
                     options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
@@ -38,12 +38,17 @@ namespace Auth_test
                     options.LoginPath = "/api/Auth/Forbidden/";
                     options.AccessDeniedPath = "/api/Auth/Forbidden/";
                 });
-
-            services.AddAuthorization(o =>
+            services.AddAuthorization(options =>
             {
-                o.AddPolicy("Over21",
-                          policy => policy.Requirements.Add(new AuthorizationRequirement(21)));
+                options.AddPolicy("Check",
+                          policy => {
+                              policy.Requirements.Add(new AuthorizationRequirement());
+                          }
+                          
+                          );
             });
+
+            services.AddControllersWithViews();
 
         }
 
