@@ -9,7 +9,7 @@ namespace Auth_test.Policy
     public class AuthorizationRequirement : IAuthorizationRequirement
     {
         public AuthorizationRequirement() {
-            Console.WriteLine("권한있음");
+
         }
     }
 }

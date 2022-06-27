@@ -39,14 +39,9 @@ namespace Auth_test
                     options.AccessDeniedPath = "/api/Auth/Forbidden/";
                 });
             services.AddAuthorization(options =>
-            {
-                options.AddPolicy("Check",
-                          policy => {
-                              policy.Requirements.Add(new AuthorizationRequirement());
-                          }
-                          
-                          );
-            });
+                {
+                    options.AddPolicy("Check", policy => policy.Requirements.Add(new AuthorizationRequirement()));
+                });
 
             services.AddControllersWithViews();
 

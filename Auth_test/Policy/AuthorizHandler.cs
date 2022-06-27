@@ -18,8 +18,8 @@ namespace Auth_test.Policy
                AuthorizationRequirement requirement)
         {
             HttpContextAccessor IHttpContextAccessor = new HttpContextAccessor();
-            string d = IHttpContextAccessor.HttpContext.Request.Cookies["Set-Cookies"];
-            if (d != null)
+            string Cookies = IHttpContextAccessor.HttpContext.Request.Cookies["Set-Cookies"];
+            if (Cookies != null)
             {
                 context.Succeed(requirement);
             }
