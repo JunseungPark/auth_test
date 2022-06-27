@@ -1,0 +1,12 @@
+C:\Users\박준승\source\repos\auth_test\Auth_test_Service\bin\Debug\net5.0\Auth_test_Service.deps.json
+C:\Users\박준승\source\repos\auth_test\Auth_test_Service\bin\Debug\net5.0\Auth_test_Service.dll
+C:\Users\박준승\source\repos\auth_test\Auth_test_Service\bin\Debug\net5.0\ref\Auth_test_Service.dll
+C:\Users\박준승\source\repos\auth_test\Auth_test_Service\bin\Debug\net5.0\Auth_test_Service.pdb
+C:\Users\박준승\source\repos\auth_test\Auth_test_Service\obj\Debug\net5.0\Auth_test_Service.csproj.AssemblyReference.cache
+C:\Users\박준승\source\repos\auth_test\Auth_test_Service\obj\Debug\net5.0\Auth_test_Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\박준승\source\repos\auth_test\Auth_test_Service\obj\Debug\net5.0\Auth_test_Service.AssemblyInfoInputs.cache
+C:\Users\박준승\source\repos\auth_test\Auth_test_Service\obj\Debug\net5.0\Auth_test_Service.AssemblyInfo.cs
+C:\Users\박준승\source\repos\auth_test\Auth_test_Service\obj\Debug\net5.0\Auth_test_Service.csproj.CoreCompileInputs.cache
+C:\Users\박준승\source\repos\auth_test\Auth_test_Service\obj\Debug\net5.0\Auth_test_Service.dll
+C:\Users\박준승\source\repos\auth_test\Auth_test_Service\obj\Debug\net5.0\ref\Auth_test_Service.dll
+C:\Users\박준승\source\repos\auth_test\Auth_test_Service\obj\Debug\net5.0\Auth_test_Service.pdb

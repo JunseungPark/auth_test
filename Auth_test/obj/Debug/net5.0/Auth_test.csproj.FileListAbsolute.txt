@@ -371,3 +371,6 @@ C:\Users\박준승\source\repos\auth_test\Auth_test\bin\Debug\net5.0\Microsoft.E
 C:\Users\박준승\source\repos\auth_test\Auth_test\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
 C:\Users\박준승\source\repos\auth_test\Auth_test\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 C:\Users\박준승\source\repos\auth_test\Auth_test\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\박준승\source\repos\auth_test\Auth_test\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\박준승\source\repos\auth_test\Auth_test\bin\Debug\net5.0\Auth_test_Service.dll
+C:\Users\박준승\source\repos\auth_test\Auth_test\bin\Debug\net5.0\Auth_test_Service.pdb

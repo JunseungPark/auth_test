@@ -1,15 +1,8 @@
-﻿using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
+﻿using Auth_test_Service.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Primitives;
-using Microsoft.IdentityModel.Tokens;
-using System;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
 
 namespace Auth_test.Controllers
 {
@@ -18,12 +11,12 @@ namespace Auth_test.Controllers
     public class AuthController : ControllerBase
     {
         private HttpContext _context;
-        private IConfiguration _configuration;
+        public IAuthService _authService;
 
-        public AuthController(IHttpContextAccessor accessor, IConfiguration config)
+        public AuthController(IHttpContextAccessor accessor, IAuthService auth)
         {
             _context = accessor.HttpContext;
-            _configuration = config;
+            _authService = auth;
         }
 
         [HttpGet]
@@ -38,33 +31,8 @@ namespace Auth_test.Controllers
         public RedirectResult Callback(string code)
         {
 
-            string _code = code;
-            bool isAuthenticated = false;
-
-            if (_code != null) isAuthenticated = true;
-
-            if (isAuthenticated)
-            {
-                _context.Response.Cookies.Append("Set-Cookies", GenerateJwtToken("dpfwl8745"));
-                return Redirect("/api/Home/CheckAuth");
-            }
-            return Redirect("/");
-        }
-
-        private string GenerateJwtToken(string username)
-        {
-
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:SecretKey"]));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var expires = DateTime.Now.AddDays(Convert.ToDouble(_configuration["JWT:JwtExpireDays"]));
-
-            var token = new JwtSecurityToken(
-                _configuration["JwtIssuer"],
-                _configuration["JwtAudience"],
-                expires: expires,
-                signingCredentials: creds
-            );
-            return new JwtSecurityTokenHandler().WriteToken(token);
+            string url = _authService.isCallBack(code);
+            return Redirect(url);
         }
 
         [HttpGet]
