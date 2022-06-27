@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\박준승\\source\\repos\\auth_test\\Auth_test_Data\\Auth_test_Data.csproj": {}
+    "C:\\Users\\khmin\\Source\\Repos\\auth_test\\Auth_test_Data\\Auth_test_Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\박준승\\source\\repos\\auth_test\\Auth_test_Data\\Auth_test_Data.csproj": {
+    "C:\\Users\\khmin\\Source\\Repos\\auth_test\\Auth_test_Data\\Auth_test_Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\박준승\\source\\repos\\auth_test\\Auth_test_Data\\Auth_test_Data.csproj",
+        "projectUniqueName": "C:\\Users\\khmin\\Source\\Repos\\auth_test\\Auth_test_Data\\Auth_test_Data.csproj",
         "projectName": "Auth_test_Data",
-        "projectPath": "C:\\Users\\박준승\\source\\repos\\auth_test\\Auth_test_Data\\Auth_test_Data.csproj",
-        "packagesPath": "C:\\Users\\박준승\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\박준승\\source\\repos\\auth_test\\Auth_test_Data\\obj\\",
+        "projectPath": "C:\\Users\\khmin\\Source\\Repos\\auth_test\\Auth_test_Data\\Auth_test_Data.csproj",
+        "packagesPath": "C:\\Users\\khmin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\khmin\\Source\\Repos\\auth_test\\Auth_test_Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\박준승\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\khmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

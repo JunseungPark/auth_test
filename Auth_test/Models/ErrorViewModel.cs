@@ -1,5 +1,3 @@
-using System;
-
 namespace Auth_test.Models
 {
     public class ErrorViewModel

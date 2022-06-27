@@ -1,9 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Auth_test.Controllers
 {
@@ -14,22 +10,17 @@ namespace Auth_test.Controllers
 
         public IActionResult Index()
         {
-            return View();           
+            return View();
         }
-
         public RedirectResult CheckAuth()
         {
-            
             return Redirect("/api/Auth/Authorization");
-
         }
-
         public IActionResult Login()
         {
             return RedirectPermanent("/api/auth/googlelogin");
         }
-
-        public IActionResult privacy()
+        public IActionResult receivepage()
         {
             return View();
         }

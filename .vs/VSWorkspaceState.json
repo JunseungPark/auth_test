@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Auth_test"
   ],
-  "SelectedNode": "\\Auth_test\\bin\\Debug\\net5.0\\Auth_test.runtimeconfig.json",
+  "SelectedNode": "\\Auth_test\\Auth_test.sln",
   "PreviewInSolutionExplorer": false
 }

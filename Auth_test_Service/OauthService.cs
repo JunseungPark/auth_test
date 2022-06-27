@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Auth_test_Service
+﻿namespace Auth_test_Service
 {
     public class OauthService
     {

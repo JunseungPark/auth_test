@@ -1,0 +1,16 @@
+﻿<div>
+    <form action="https://oauth2.googleapis.com/token" method="post" enctype="application/x-www-form-urlencoded">
+        code : <input type="text" name="code" value="@Context.Request.Query["code"]" /><br />
+        client_id : <input type="text" name="client_id" value="148638893775-f1bbqle3vgkmjvkhiadki3c79snbkpcp.apps.googleusercontent.com" /><br />
+        client_secret : <input type="text" name="client_secret" value="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" /><br />
+        redirect_uri : <input type="text" name="redirect_uri" value="https://localhost:44364/api/Home/receivepage" /><br />
+        grant_type : <input type="text" name="grant_type" value="authorization_code" />
+        <button type="submit">submit</button>
+    </form>
+</div>
+
+<style>
+    input{
+        width:500px;
+    }
+</style>
