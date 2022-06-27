@@ -1,8 +1,18 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Auth_test"
+    "\\Auth_test",
+    "\\Auth_test\\bin",
+    "\\Auth_test\\bin\\Release",
+    "\\Auth_test\\bin\\Release\\net5.0",
+    "\\Auth_test\\bin\\Release\\net5.0\\ref",
+    "\\Auth_test\\Controllers",
+    "\\Auth_test\\obj",
+    "\\Auth_test\\obj\\Debug",
+    "\\Auth_test\\obj\\Debug\\net5.0",
+    "\\Auth_test\\obj\\Release",
+    "\\Auth_test\\obj\\Release\\net5.0"
   ],
-  "SelectedNode": "\\Auth_test\\Auth_test.sln",
+  "SelectedNode": "\\Auth_test\\Controllers\\AuthController.cs",
   "PreviewInSolutionExplorer": false
 }

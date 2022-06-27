@@ -7061,8 +7061,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\박준승\\source\\repos\\auth_test\\Auth_test_Service\\Auth_test_Service.csproj": {
-              "projectPath": "C:\\Users\\박준승\\source\\repos\\auth_test\\Auth_test_Service\\Auth_test_Service.csproj"
+            "C:\\Users\\khmin\\Source\\Repos\\auth_test\\Auth_test_Service\\Auth_test_Service.csproj": {
+              "projectPath": "C:\\Users\\khmin\\Source\\Repos\\auth_test\\Auth_test_Service\\Auth_test_Service.csproj"
             }
           }
         }
@@ -7121,6 +7121,12 @@
     }
   },
   "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "캐시 파일 C:\\Users\\khmin\\Source\\Repos\\auth_test\\Auth_test\\obj\\project.nuget.cache을(를) 읽는 동안 문제가 발생했습니다. Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
     {
       "code": "NU1701",
       "level": "Warning",
