@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\khmin\\Source\\Repos\\auth_test\\Auth_test_Service\\Auth_test_Service.csproj": {}
+    "C:\\Users\\박준승\\source\\repos\\auth_test\\Auth_test_Service\\Auth_test_Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\khmin\\Source\\Repos\\auth_test\\Auth_test_Service\\Auth_test_Service.csproj": {
+    "C:\\Users\\박준승\\source\\repos\\auth_test\\Auth_test_Service\\Auth_test_Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\khmin\\Source\\Repos\\auth_test\\Auth_test_Service\\Auth_test_Service.csproj",
+        "projectUniqueName": "C:\\Users\\박준승\\source\\repos\\auth_test\\Auth_test_Service\\Auth_test_Service.csproj",
         "projectName": "Auth_test_Service",
-        "projectPath": "C:\\Users\\khmin\\Source\\Repos\\auth_test\\Auth_test_Service\\Auth_test_Service.csproj",
-        "packagesPath": "C:\\Users\\khmin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\khmin\\Source\\Repos\\auth_test\\Auth_test_Service\\obj\\",
+        "projectPath": "C:\\Users\\박준승\\source\\repos\\auth_test\\Auth_test_Service\\Auth_test_Service.csproj",
+        "packagesPath": "C:\\Users\\박준승\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\박준승\\source\\repos\\auth_test\\Auth_test_Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\khmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\박준승\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -72,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.409\\RuntimeIdentifierGraph.json"
         }
       }
     }
