@@ -21,12 +21,10 @@ namespace Auth_test.Controllers
             }
             return View();           
         }
-
         public RedirectResult CheckAuth()
         {   
             return Redirect("/api/Auth/Authorization");
         }
-
         public IActionResult Login()
         {
             return RedirectPermanent("/api/auth/googlelogin");

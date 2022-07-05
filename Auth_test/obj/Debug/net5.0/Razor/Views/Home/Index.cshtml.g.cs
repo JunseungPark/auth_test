@@ -13,14 +13,14 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\박준승\source\repos\auth_test\Auth_test\Views\_ViewImports.cshtml"
+#line 1 "C:\Users\khmin\Source\Repos\auth_test\Auth_test\Views\_ViewImports.cshtml"
 using Auth_test;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\박준승\source\repos\auth_test\Auth_test\Views\_ViewImports.cshtml"
+#line 2 "C:\Users\khmin\Source\Repos\auth_test\Auth_test\Views\_ViewImports.cshtml"
 using Auth_test.Models;
 
 #line default
@@ -34,7 +34,7 @@ using Auth_test.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
 #nullable restore
-#line 1 "C:\Users\박준승\source\repos\auth_test\Auth_test\Views\Home\Index.cshtml"
+#line 1 "C:\Users\khmin\Source\Repos\auth_test\Auth_test\Views\Home\Index.cshtml"
   
     ViewData["Title"] = "Home Page";
 
