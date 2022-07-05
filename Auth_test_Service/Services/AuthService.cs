@@ -40,8 +40,8 @@ namespace Auth_test_Service.Services
             var expires = DateTime.Now.AddDays(Convert.ToDouble(_configuration["JWT:JwtExpireDays"]));
 
             var token = new JwtSecurityToken(
-                _configuration["JwtIssuer"],
-                _configuration["JwtAudience"],
+                _configuration["Issuer"],
+                _configuration["Audience"],
                 expires: expires,
                 signingCredentials: creds
             );

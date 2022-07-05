@@ -43,7 +43,7 @@ namespace Auth_test.Controllers
             bool exists = _context.Request.Query.TryGetValue("returnUrl", out paramReturnUrl);
 
             paramReturnUrl = exists ? _context.Request.RouteValues + paramReturnUrl[0] : string.Empty;
-
+            _context.Response.WriteAsync("<script>alert('restricted access!!!!!'); window.location =' /api/Home/Index';</script>");
             return Redirect("/api/Home/Index");
         }
         

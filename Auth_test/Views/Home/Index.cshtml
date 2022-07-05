@@ -3,5 +3,12 @@
 }
 
 <div class="text-center">
-    <a href="@Url.Action("Login")">로그인</a>
+    @if ((bool)TempData["isCookies"])
+    {
+        <a href="@Url.Action("Login")">로그인</a>
+    }
+    else
+    {
+        <a>로그아웃</a>
+    }
 </div>
